@@ -1,11 +1,8 @@
 import streamlit as st
 import numpy as np
 import joblib
-from pyngrok import ngrok
 
-# فتح نفق على البورت الذي يعمل عليه Streamlit (عادة 8501)
-public_url = ngrok.connect(8501)
-print(f" * Streamlit app is live at: {public_url}")
+
 
 # Load the trained model and scaler
 model = joblib.load("alzheimerr_model.pkl")
